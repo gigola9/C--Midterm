@@ -9,54 +9,90 @@ namespace Midterm
 
         static void Main(string[] args)
         {
-            Commercial first = new Commercial()
+            Console.Write("Enter n: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Software[] data = new Software[n];
+            for (int i = 0; i < n; i++)
             {
-                Name = "First",
-                ActiveUntil = 10,
-                Date = DateTime.Now,
-                Factory = "Apple",
-                InstalationDate = DateTime.Now,
-                Price = 45.3
-            };
-            Experimental second = new Experimental()
-            {
-                Name = "Second",
-                Date = DateTime.Now,
-                InstalationDate = DateTime.Now,
-                Factory = "Samsung",
-                FreeUntil = 7
-            };
-            Free third = new Free()
-            {
-                Name = "Third",
-                Factory = "Pixel",
-                Date = DateTime.Now,
-            };
-            Free fourth = new Free()
-            {
-                Name = "Fourth",
-                Factory = "One Plus",
-                Date = DateTime.Parse("Jan 1, 2029"),
-            };
-
-            List<Software> data = new List<Software>();
-            data.Add(first);
-            data.Add(second);
-            data.Add(third);
-            data.Add(fourth);
+                Console.WriteLine("------ Choose category ------");
+                Console.WriteLine("1) Commercial");
+                Console.WriteLine("2) Experimental");
+                Console.WriteLine("3) Free");
+                Console.Write("Enter category number: ");
+                int selectedType = int.Parse(Console.ReadLine());
+                Console.Clear();
+                switch(selectedType)
+                {
+                    case 1:
+                        Commercial first = new Commercial();
+                        Console.Write("Enter  Name: ");
+                        first.Name = Console.ReadLine();
+                        Console.Write("Enter  Factory: ");
+                        first.Factory = Console.ReadLine();
+                        Console.Write("Enter  Activation Date (Month): ");
+                        first.ActiveUntil = int.Parse(Console.ReadLine());
+                        Console.Write("Enter  Price: ");
+                        first.Price = Double.Parse(Console.ReadLine());
+                        Console.Write("Enter  Release Date: ");
+                        first.Date = DateTime.Parse(Console.ReadLine());
+                        Console.Write("Enter  Instalation Date: ");
+                        first.InstalationDate = DateTime.Parse(Console.ReadLine());
+                        data[i] = first;
+                        break;
+                    case 2:
+                        Experimental second = new Experimental();
+                        Console.Write("Enter  Name: ");
+                        second.Name = Console.ReadLine();
+                        Console.Write("Enter  Factory: ");
+                        second.Factory = Console.ReadLine();
+                        Console.Write("Enter  Free Untli (Month): ");
+                        second.FreeUntil = int.Parse(Console.ReadLine());
+                        Console.Write("Enter  Release Date: ");
+                        second.Date = DateTime.Parse(Console.ReadLine());
+                        Console.Write("Enter  Instalation Date: ");
+                        second.InstalationDate = DateTime.Parse(Console.ReadLine());
+                        data[i] = second;
+                        break;
+                    case 3:
+                        Free third = new Free();
+                        Console.Write("Enter  Name: ");
+                        third.Name = Console.ReadLine();
+                        Console.Write("Enter  Factory: ");
+                        third.Factory = Console.ReadLine();
+                        Console.Write("Enter  Release Date: ");
+                        third.Date = DateTime.Parse(Console.ReadLine());
+                        data[i] = third;
+                        break;
+                    default:
+                        Console.WriteLine("Wrong category number !!!");
+                        break;
+                }
+                Console.Clear();
+            }
 
             // Print software information
-            data.ForEach(item => item.printSoftwareDetails());
-            Console.WriteLine("------------");
+            Console.WriteLine("------ Print Details ------");
+            for (int i = 0; i < n; i++)
+            {
+                data[i].PrintSoftwareDetails();
+            }
 
             // Print software information  by valid date
-            data.ForEach(item =>
-            {
-                if (item.isValid())
+            Console.Write("Input date: ");
+            DateTime flDate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("------ Print Valid Softwares ------");
+            filterDate(flDate);
+
+            void filterDate(DateTime time) {
+                for (int i = 0; i < n; i++)
                 {
-                    item.printSoftwareDetails();
+                    if (data[i].IsValid(time))
+                    {
+                        data[i].PrintSoftwareDetails();
+                    }
                 }
-            });
+            }
         }
     }
 }

@@ -8,15 +8,20 @@ namespace Midterm
 {
     public class Experimental: Software
     {
-        public string Name { get; set; }
-        public string Factory { get; set; }
-        public override DateTime Date { get; set; }
         public DateTime InstalationDate { get; set; }
         public int FreeUntil { get; set; }
 
-        public override void printSoftwareDetails()
+        public override void PrintSoftwareDetails()
         {
-            Console.WriteLine($"Software type is: {Name}");
+            Console.WriteLine($"Details - Name: {Name}, Factory: {Factory}, Date: {Date}, Instalation Date: {InstalationDate}, Free Until Months: {FreeUntil}");
+        }
+        public override bool IsValid(DateTime time)
+        {
+            if (InstalationDate.AddMonths(FreeUntil) > time)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -8,18 +8,13 @@ namespace Midterm
 {
     public abstract class Software
     {
-        public abstract void printSoftwareDetails();
-
-        public abstract DateTime Date { get; set; }
-        public bool isValid()
+        public string Name { get; set; }
+        public string Factory { get; set; }
+        public DateTime Date { get; set; }
+        public abstract void PrintSoftwareDetails();
+        public virtual bool IsValid(DateTime time)
         {
-            if (DateTime.Now < Date)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
+            return true;
         }
     }
 }

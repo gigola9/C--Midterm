@@ -8,13 +8,9 @@ namespace Midterm
 {
     public class Free : Software
     {
-        public string Name { get; set; }
-        public string Factory { get; set; }
-        public override DateTime Date { get; set; }
-
-        public override void printSoftwareDetails()
+        public override void PrintSoftwareDetails()
         {
-            Console.WriteLine($"Software type is: {Name}");
+            Console.WriteLine($"Details - Name: {Name}, Factory: {Factory}, Date: {Date}");
         }
     }
 }

@@ -8,17 +8,22 @@ namespace Midterm.Model
 {
     public class Commercial: Software
     {
-        public string Name { get; set; }
-        public string Factory { get; set; }
-        public override DateTime Date { get; set; }
-        public double Price { get; set; }
+
         public DateTime InstalationDate { get; set; }
         public int ActiveUntil { get; set; }
+        public double Price { get; set; }
 
-        public override void printSoftwareDetails()
+        public override void PrintSoftwareDetails()
         {
-            Console.WriteLine($"Software type is: {Name}");
+            Console.WriteLine($"Details - Name: {Name}, Factory: {Factory}, Date: {Date}, Instalation Date: {InstalationDate}, Price: {Price}, Activation Months: {ActiveUntil}");
         }
-
+        public override bool IsValid(DateTime time)
+        {
+            if (InstalationDate.AddMonths(ActiveUntil) > time)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
