@@ -1,0 +1,16 @@
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\bin\Debug\net5.0\Midterm.exe
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\bin\Debug\net5.0\Midterm.deps.json
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\bin\Debug\net5.0\Midterm.runtimeconfig.json
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\bin\Debug\net5.0\Midterm.runtimeconfig.dev.json
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\bin\Debug\net5.0\Midterm.dll
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\bin\Debug\net5.0\Midterm.pdb
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.csproj.AssemblyReference.cache
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.AssemblyInfoInputs.cache
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.AssemblyInfo.cs
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.csproj.CoreCompileInputs.cache
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.dll
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\refint\Midterm.dll
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.pdb
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\Midterm.genruntimeconfig.cache
+C:\Users\GAsanidze\source\repos\Midterm\Midterm\obj\Debug\net5.0\ref\Midterm.dll
